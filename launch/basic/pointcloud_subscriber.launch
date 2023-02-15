@@ -1,0 +1,11 @@
+<launch>
+    <node pkg="rviz" type="rviz" name="rviz" args= "-d $(find pcl_tutorial_ros)/config/rviz/pointcloud_subscriber.rviz"/>
+    <group ns = "pointcloud_subscriber">
+        <node pkg="pcl_tutorial_ros" type="pointcloud_subscriber" name="pointcloud_subscriber" output="screen">
+            <rosparam>
+                topic_name : /sensor_data
+                target_frame : base_footprint
+            </rosparam>
+        </node>
+    </group>
+</launch>

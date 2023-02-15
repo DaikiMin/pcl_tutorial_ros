@@ -1,0 +1,14 @@
+<launch>
+    <node pkg="rviz" type="rviz" name="rviz" args= "-d $(find pcl_tutorial_ros)/config/rviz/region_growing_segmentation.rviz"/>
+    <group ns = "region_growing_segmentation">
+        <node pkg="pcl_tutorial_ros" type="region_growing_segmentation" name="region_growing_segmentation" output="screen">
+            <rosparam>
+                topic_name : /sensor_data
+                target_frame : base_footprint
+                voxel_leaf_size : 0.025
+                segment_distance_threshold  : 0.02
+                segment_probability : 0.90
+            </rosparam>
+        </node>
+    </group>
+</launch>

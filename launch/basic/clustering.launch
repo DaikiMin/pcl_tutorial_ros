@@ -1,0 +1,20 @@
+<launch>
+    <node pkg="rviz" type="rviz" name="rviz" args= "-d $(find pcl_tutorial_ros)/config/rviz/clustering.rviz"/>
+    <group ns = "clustering">
+        <node pkg="pcl_tutorial_ros" type="clustering" name="clustering" output="screen">
+            <rosparam>
+                topic_name : /sensor_data
+                target_frame : base_footprint
+                pass_axis : z
+                pass_min_range : 0.1
+                pass_max_range : 1.0
+                voxel_leaf_size : 0.025
+                clustering_tolerance : 0.1
+                clustering_points_min_size : 5
+                clustering_points_max_size : 5000
+                cluster_size_min : [0.2, 0.2, 0.2]
+                cluster_size_max : [1.0, 1.0, 1.0] 
+            </rosparam>
+        </node>
+    </group>
+</launch>

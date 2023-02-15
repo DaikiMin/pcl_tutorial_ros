@@ -1,0 +1,5 @@
+<launch>
+    <param name="data_path" type="str" value="$(find pcl_tutorial_ros)/pcd/laboratory_binary.pcd"/>
+    <node pkg="pcl_tutorial_ros" type="pointcloud_publisher" name="pointcloud_publisher" output="screen"/>
+    <node pkg="tf" type="static_transform_publisher" name="robot2senser" args="0 0 1.0 0 0 0 base_footprint camera_link 100" />
+</launch>

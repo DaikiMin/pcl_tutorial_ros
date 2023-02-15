@@ -1,0 +1,15 @@
+<launch>
+    <node pkg="rviz" type="rviz" name="rviz" args= "-d $(find pcl_tutorial_ros)/config/rviz/voxel_grid.rviz"/>
+    <group ns = "voxel_grid">
+        <node pkg="pcl_tutorial_ros" type="voxel_grid" name="voxel_grid" output="screen">
+            <rosparam>
+                topic_name : /sensor_data
+                target_frame : base_footprint
+                pass_axis : z
+                pass_min_range : 0.1
+                pass_max_range : 1.0
+                voxel_leaf_size : 0.025
+            </rosparam>
+        </node>
+    </group>
+</launch>
