@@ -54,6 +54,9 @@ for ( auto &cluster : cluster_indices ) {
 
 【 sample launch 】
 ```py
+$ roslaunch pcl_tutorial_ros pointcloud_publisher.launch
+```
+```py
 $ roslaunch pcl_tutorial_ros clustering.launch
 ```
 

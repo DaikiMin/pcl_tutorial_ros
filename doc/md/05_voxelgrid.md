@@ -20,6 +20,9 @@ voxel.filter(*cloud_voxel);                     //対象になる点群データ
 
 【 sample launch 】
 ```py
+$ roslaunch pcl_tutorial_ros pointcloud_publisher.launch
+```
+```py
 $ roslaunch pcl_tutorial_ros voxel_grid.launch
 ```
 

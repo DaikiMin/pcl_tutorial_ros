@@ -49,6 +49,9 @@ reg.extract (clusters);                             //セグメンテーショ�
 
 【 sample launch 】
 ```py
+$ roslaunch pcl_tutorial_ros pointcloud_publisher.launch
+```
+```py
 $ roslaunch pcl_tutorial_ros region_growing_segmentation.launch
 ```
 

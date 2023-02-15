@@ -26,6 +26,9 @@ XYZすべてでフィルターをかけたい場合は，X，Y，ZそれぞれPa
 
 【 sample launch 】
 ```py
+$ roslaunch pcl_tutorial_ros pointcloud_publisher.launch
+```
+```py
 $ roslaunch pcl_tutorial_ros passthrough.launch
 ```
 

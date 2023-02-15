@@ -25,6 +25,9 @@ pcl_ros::transformPointCloud(target_frame, ros::Time(0), cloud_src, cloud_src.he
 
 【 sample launch 】
 ```py
+$ roslaunch pcl_tutorial_ros pointcloud_publisher.launch
+```
+```py
 $ roslaunch pcl_tutorial_ros pointcloud_subscriber.launch
 ```
 

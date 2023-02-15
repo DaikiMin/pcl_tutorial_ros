@@ -16,6 +16,9 @@ sample srcでは，はじめにクラスタリングを用いて追跡対象と�
 
 【 sample launch 】
 ```py
+$ roslaunch pcl_tutorial_ros pointcloud_publisher.launch
+```
+```py
 $ roslaunch pcl_tutorial_ros tracker.launch
 ```
 
