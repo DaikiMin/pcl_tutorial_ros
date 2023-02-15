@@ -50,7 +50,7 @@ namespace pch {
                 pcl_ros::transformPointCloud(target_frame, ros::Time(0), cloud_src, cloud_src.header.frame_id,  *output_cloud, tf_listener_);
                 output_cloud->header.frame_id = target_frame;
                 return true;
-            } catch (tf::TransformException ex) {
+            } catch (tf::TransformException &ex) {
                 ROS_ERROR("%s", ex.what());
                 return false;
             }

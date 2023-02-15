@@ -49,7 +49,7 @@ class PCDConservator
                         tf_listener_.waitForTransform(target_frame_, cloud_src.header.frame_id, ros::Time(0), ros::Duration(1.0));
                         pcl_ros::transformPointCloud(target_frame_, ros::Time(0), cloud_src, cloud_src.header.frame_id,  *cloud_transformed_, tf_listener_);
                     }
-                    catch (tf::TransformException ex) {
+                    catch (tf::TransformException &ex) {
                         ROS_ERROR("%s", ex.what());
                         return;
                     }

@@ -1,8 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(pcl_tutorial_ros)
 
-## Compile as C++11, supported in ROS Kinetic and newer
-# add_compile_options(-std=c++11)
+add_compile_options(-std=c++14 -O2 -g -Wall)
 
 find_package( catkin REQUIRED COMPONENTS
   pcl_ros
